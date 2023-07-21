@@ -1,5 +1,6 @@
 .container {
   padding: 0 2rem;
+  background-image: linear-gradient(to right, #626ff9, #f767c9);
 }
 
 .main {
@@ -67,6 +68,7 @@
 
 .grid {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
@@ -126,4 +128,9 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+/* Creados por mi, Los de arriba son por defecto. Luego les modifoco los nombres que estan muy genericos */
+.inputContainer {
+  margin-bottom: 30px;
 }
