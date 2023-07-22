@@ -5,6 +5,12 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
+/* next js */
+import Link from 'next/link';
+
+/* icons */
+import { MdFacebook } from "react-icons/md";
+
 /* components */
 import { NormalInput, NormalButton } from "../components";
 
@@ -57,13 +63,26 @@ const Home: NextPage = () => {
           </div>
 
           <div className={styles.buttonContainer}>
-            <NormalButton value="Inciar sesion" />
+            <NormalButton value="Inciar sesión" />
           </div>
-          <p>¿No tienes una cuenta? click aqui para registrarte</p>
 
-          <div className={styles.buttonContainer}>
-            
+          <div className={styles.separador}>
+            <div className={styles.separadorInterno}></div>
+            <p>O</p>
+            <div className={styles.separadorInterno}></div>
           </div>
+
+          <div className={styles.facebook}>
+            <MdFacebook size={25} color="#385185" style={{ width: "10%" }} />
+            <p style={{ width: "90%", color: "#385185", marginLeft: 5, fontWeight: "bold" }}>Inicia sesión con facebook</p>
+          </div>
+
+          <div className={styles.iniciarConRedesSociales}></div>
+
+
+          <Link href="/Register">¿No tienes una cuenta? click aqui para registrarte</Link>
+
+          <div className={styles.buttonContainer}></div>
         </section>
       </main>
 

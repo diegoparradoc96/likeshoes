@@ -9,6 +9,7 @@ interface NormalInputProps {
   name: string;
   disabled?: boolean;
   type?: "password" | "text";
+  size?: "sm" | "md" | "lg" | "xl";
   handleInputChange: (
     event: ChangeEvent<HTMLTextAreaElement | HTMLInputElement>
   ) => void;
@@ -20,8 +21,15 @@ const NormalInput = ({
   name,
   handleInputChange,
   type = "text",
+  size = "md",
   disabled = false,
 }: NormalInputProps) => {
+  const styles = {
+    input: {
+      width: "100%",
+    },
+  };
+
   return (
     <Input
       labelPlaceholder={label}
@@ -29,7 +37,9 @@ const NormalInput = ({
       name={name}
       disabled={disabled}
       type={type}
+      size={size}
       onChange={(event) => handleInputChange(event)}
+      style={styles.input}
     />
   );
 };
